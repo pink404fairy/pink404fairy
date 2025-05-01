@@ -377,3 +377,14 @@ function openStoryViewer(stories, startIndex = 0) {
  *     }
  * }
  */ 
+
+// // js/instagram.js
+// async function loadInstagramFeed() {
+//     try {
+//       const response = await fetch('https://your-serverless-function.url/instagram');
+//       const data = await response.json();
+//       // Render gallery
+//     } catch (error) {
+//       console.error('Error loading Instagram:', error);
+//     }
+//   }

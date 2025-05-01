@@ -66,3 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100);
 }); 
+
+// Check system preference
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark-theme');
+  }
