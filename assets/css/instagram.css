@@ -1,0 +1,217 @@
+/**
+ * Blue Rose Initiative - Instagram Integration Styles
+ */
+
+/* Instagram Gallery Overlay */
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover .instagram-overlay {
+    opacity: 1;
+}
+
+.instagram-overlay i {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Story Viewer */
+.instagram-story-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1010;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.story-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.story-content {
+    width: 100%;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 700px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.story-image-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.story-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.story-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 1005;
+    width: 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.story-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.story-progress-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    gap: 4px;
+    z-index: 1005;
+}
+
+.story-progress-bar {
+    height: 3px;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.story-progress-fill {
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Improvements to existing Instagram Story circles */
+.story-circle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.story-circle:hover {
+    transform: scale(1.05);
+}
+
+.story-circle:active {
+    transform: scale(0.95);
+}
+
+/* Loading Indicator */
+.instagram-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--primary-color);
+}
+
+.instagram-loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 105, 180, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error Message */
+.instagram-error {
+    text-align: center;
+    padding: 20px;
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .story-content {
+        width: 90%;
+        height: 70vh;
+    }
+    
+    .story-nav-btn {
+        font-size: 40px;
+        width: 40px;
+    }
+    
+    .story-caption {
+        padding: 15px;
+        font-size: 14px;
+    }
+} 

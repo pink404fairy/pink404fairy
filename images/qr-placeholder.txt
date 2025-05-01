@@ -1,0 +1,16 @@
+QR CODE PLACEHOLDER
+
+This file is a placeholder for the QR code image that would be used in the secure backup page.
+
+In a production environment, you would need to:
+
+1. Generate a unique QR code for each user that contains:
+   - A secure token for account linking
+   - The API endpoint URL for the iOS app to connect to
+   - Any additional parameters needed for secure authentication
+
+2. The QR code should be regenerated periodically for security reasons
+
+3. The iOS app would scan this QR code to establish a secure connection to the user's account
+
+Please replace this text file with an actual QR code image named "qr-placeholder.png" when implementing the real system. 
